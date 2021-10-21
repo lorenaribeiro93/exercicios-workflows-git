@@ -3,7 +3,7 @@
 echo 'Bonus: Construir scripts que implementem as seguintes funcionalidades:'
 bonus(){
 
-  LIST=$(cut -d, -f$1 arq.csv | grep -v $2 | sort | uniq)
+  LIST=$(cut -d, -f$1 2006-sample.csv | grep -v $2 | sort | uniq)
 
   BIGGER=0
 
@@ -11,9 +11,9 @@ bonus(){
 
     if [ $1 -gt 16 ]
       then
-        SUM=($(cut -d, -f$1,16 arq.csv | grep $ITEM | cut -d, -f1 | grep -v "\-.*" | grep -v NA | paste -sd+ - | bc))
+        SUM=($(cut -d, -f$1,16 2006-sample.csv | grep $ITEM | cut -d, -f1 | grep -v "\-.*" | grep -v NA | paste -sd+ - | bc))
       else
-        SUM=($(cut -d, -f$1,16 arq.csv | grep $ITEM | cut -d, -f2 | grep -v "\-.*" | grep -v NA | paste -sd+ - | bc))
+        SUM=($(cut -d, -f$1,16 2006-sample.csv | grep $ITEM | cut -d, -f2 | grep -v "\-.*" | grep -v NA | paste -sd+ - | bc))
     fi
 
     if [ $SUM -gt $BIGGER ]; then
