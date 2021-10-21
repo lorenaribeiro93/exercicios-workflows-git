@@ -1,4 +1,4 @@
 #!/bin/bash
 
-echo '2. Descobrir o vôo com maior atraso na chegada (ArrDelay) registrado.'
-sort -t, -k15 -n arq.csv |  tail -1
+echo '3. Descobrir o vôo com maior atraso na saída (DepDelay) registrado.'
+sort -t, -k16 -n arq.csv |  tail -1
